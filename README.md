@@ -1,3 +1,7 @@
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=170&section=header&text=Sentiment%20Analysis&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=RNN%20vs%20LSTM%20vs%20fine-tuned%20DistilBERT&descAlignY=72&descSize=16" width="100%"/>
+</div>
+
 # Sentiment Analysis — RNN vs LSTM vs DistilBERT
 
 [![CI](https://github.com/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/actions/workflows/ci.yml/badge.svg)](https://github.com/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/actions/workflows/ci.yml)
