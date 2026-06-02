@@ -1,0 +1,4 @@
+# Needed for the real dataset + the DistilBERT fine-tuning path.
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.27

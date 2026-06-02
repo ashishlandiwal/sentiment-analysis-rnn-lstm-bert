@@ -1,0 +1,31 @@
+{
+  "dataset": "rotten_tomatoes",
+  "train_size": 8530,
+  "test_size": 1066,
+  "results": {
+    "rnn": {
+      "accuracy": 0.49530956848030017,
+      "precision": 0.4952856056183552,
+      "recall": 0.49530956848030017,
+      "f1": 0.4946674279591722
+    },
+    "lstm": {
+      "accuracy": 0.7166979362101313,
+      "precision": 0.7290975873887754,
+      "recall": 0.7166979362101313,
+      "f1": 0.7128120037824046
+    },
+    "bert": {
+      "accuracy": 0.8255159474671669,
+      "precision": 0.8299809095612767,
+      "recall": 0.8255159474671669,
+      "f1": 0.8249237094176486
+    }
+  },
+  "bert": {
+    "model": "distilbert-base-uncased",
+    "train_examples": 2000,
+    "epochs": 2,
+    "note": "fine-tuned on a CPU-friendly subset; scale up on GPU for the headline number"
+  }
+}
