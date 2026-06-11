@@ -4,6 +4,10 @@
 
 # Sentiment Analysis — RNN vs LSTM vs DistilBERT
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/blob/main/notebooks/train_and_publish_colab.ipynb)
+
+Reproduce the DistilBERT result and publish weights to HF Hub in ~10 min on a free Colab T4.
+
 [![CI](https://github.com/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/actions/workflows/ci.yml/badge.svg)](https://github.com/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c)
