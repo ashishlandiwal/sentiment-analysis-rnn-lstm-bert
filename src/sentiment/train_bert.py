@@ -30,8 +30,9 @@ def train_bert(
     torch.manual_seed(seed)
     np.random.seed(seed)
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2).to(device)
 
     def encode(texts):
         return tokenizer(
@@ -47,6 +48,9 @@ def train_bert(
     model.train()
     for _ in range(epochs):
         for input_ids, attention_mask, yb in loader:
+            input_ids, attention_mask, yb = (
+                input_ids.to(device), attention_mask.to(device), yb.to(device)
+            )
             optimizer.zero_grad()
             out = model(input_ids=input_ids, attention_mask=attention_mask, labels=yb)
             out.loss.backward()
@@ -58,9 +62,9 @@ def train_bert(
     with torch.no_grad():
         for i in range(0, len(test_texts), batch_size):
             logits = model(
-                input_ids=enc_test["input_ids"][i : i + batch_size],
-                attention_mask=enc_test["attention_mask"][i : i + batch_size],
+                input_ids=enc_test["input_ids"][i : i + batch_size].to(device),
+                attention_mask=enc_test["attention_mask"][i : i + batch_size].to(device),
             ).logits
-            preds.append(logits.argmax(1))
+            preds.append(logits.argmax(1).cpu())
     preds = torch.cat(preds).numpy()
     return model, tokenizer, evaluate.classification_metrics(test_labels, preds)
