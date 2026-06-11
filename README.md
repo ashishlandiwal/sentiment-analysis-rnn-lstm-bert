@@ -4,6 +4,10 @@
 
 # Sentiment Analysis — RNN vs LSTM vs DistilBERT
 
+[![Live Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-HF%20Spaces-blue)](https://huggingface.co/spaces/ashishjangra284/sentiment-analysis-bert)
+
+**🚀 Try it live:** https://huggingface.co/spaces/ashishjangra284/sentiment-analysis-bert · **Weights:** [distilbert-rotten-tomatoes](https://huggingface.co/ashishjangra284/distilbert-rotten-tomatoes) (verified run: **85.3% accuracy / 0.853 F1**, 2 epochs on T4)
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ashishlandiwal/sentiment-analysis-rnn-lstm-bert/blob/main/notebooks/train_and_publish_colab.ipynb)
 
 Reproduce the DistilBERT result and publish weights to HF Hub in ~10 min on a free Colab T4.
